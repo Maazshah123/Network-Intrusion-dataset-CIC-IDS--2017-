@@ -1,0 +1,39 @@
+CLO4 Report — Figures checklist (match placeholders in CLO4_IDS_ML_Report.docx)
+================================================================================
+
+How to insert in Word:
+  Replace each gray italic line "[INSERT FIGURE X HERE — ...]" with:
+  Insert > Pictures > This Device (your screenshot).
+  Keep or edit the line below it starting "Figure X:" as the caption (Home > styles: Caption optional).
+
+Figure 1 — data.columns (you requested this)
+  WHERE IN REPORT: Methodology > "Feature inventory (columns)" section
+  WHAT TO CAPTURE: Run data.columns in Jupyter and screenshot the full Index output
+                   (all 79 names including Label). Zoom out or use multi-line capture if needed.
+
+Figure 2 — Class distribution
+  WHERE: Methodology > "Exploratory Data Analysis (EDA)"
+  WHAT: Screenshot of data['Label'].value_counts() output
+
+Figure 3 — Confusion matrix
+  WHERE: Results > "Precision, recall, and confusion matrix"
+  WHAT: Your seaborn heatmap for Random Forest
+
+Figure 4 — classification_report
+  WHERE: Same section, after Figure 3
+  WHAT: Text output showing precision / recall / f1 per class
+
+Figure 5 — Training vs validation accuracy plot
+  WHERE: Results > "Deep learning training curve"
+  WHAT: Your matplotlib plot from the CNN-LSTM history
+
+Figure 6 — Model comparison table
+  WHERE: Results > "Model comparison"
+  WHAT: Screenshot of the pandas DataFrame comparing Random Forest vs CNN-LSTM accuracy
+
+Before submission:
+  Replace [YOUR FULL NAME], [YOUR STUDENT ID], GitHub repo URL, and GitHub profile link in the .docx
+  Re-run the notebook if you change preprocessing so text and screenshots stay consistent.
+
+Regenerating the Word file:
+  python generate_CLO4_report.py
